@@ -38,7 +38,7 @@ export default function SeamlessWorkflow() {
             LEFT COLUMN: Static Flow (Scrolls normally)
             ========================================= */}
         {/* lg:pt-40 lagaya hai taake cards right text se neechay se start hon */}
-        <div className="w-full lg:w-1/2 flex flex-col lg:pt-40 lg:pr-16 relative z-10">
+        <div className="w-full lg:w-1/2 flex flex-col gap-12 lg:pt-40 lg:pr-16 relative z-10">
           {workflowSteps.map((step, index) => {
             const isLast = index === workflowSteps.length - 1;
 
