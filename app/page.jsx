@@ -5,6 +5,7 @@ import FeaturedSection from "./component/FeaturedSection";
 import ExpandingGallery from "./component/ExpandingGallery";
 import TestimonialSection from "./component/TestimonialSection";
 import SeamlessWorkflow from "./component/SeamlessWorkflow";
+import ClientReviews from "./component/ClientReviews";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ExpandingGallery />
       <TestimonialSection />
       <SeamlessWorkflow />
+      <ClientReviews />
     </div>
   );
 }
