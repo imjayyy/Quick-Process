@@ -9,3 +9,10 @@
   --color-orange: #EB5E28;
 }
 
+.font-harmonie {
+  font-family: var(--font-harmonie);
+}
+
+.font-pogania {
+  font-family: var(--font-pogania);
+}

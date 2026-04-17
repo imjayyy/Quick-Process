@@ -1,12 +1,12 @@
 
 import Image from 'next/image';
 import React from 'react';
-
+import { FaArrowRightLong } from "react-icons/fa6";
 const Header = () => (
   <header className="fixed top-0 left-0 w-full z-50">
-      <div className="flex justify-between items-center w-full max-w-[1200px] mx-auto h-[90px] px-12 rounded-b-3xl shadow-[0_6px_32px_0_rgba(0,0,0,0.04)] bg-(--color-white)">
+    <div className="container flex justify-between items-center w-full mx-auto h-23 px-6 rounded-b-4xl shadow-lg bg-[var(--color-white)]">
       {/* Logo */}
-     <Image 
+      <Image
         src="/logo.png"
         alt="QuickProcess Logo"
         width={110}
@@ -19,7 +19,7 @@ const Header = () => (
           <a
             key={item}
             href="#"
-              className="text-[17px] font-medium text-(--color-grey-dark) hover:text-(--color-orange) transition-colors duration-200 font-sans"
+            className="text-[17px] font-medium text-(--color-grey-dark) hover:text-(--color-orange) transition-colors duration-200 font-sans"
           >
             {item}
           </a>
@@ -28,10 +28,21 @@ const Header = () => (
       {/* Contact Button */}
       <a
         href="#"
-          className="flex items-center gap-3 bg-(--color-grey-medium) text-(--color-white) px-6 py-2 rounded-full font-semibold text-[17px] shadow-md hover:shadow-lg transition duration-200 h-12"
+        className="group relative flex items-center justify-start bg-[#1e1c1b] text-white px-4 py-2 rounded-full font-semibold text-[17px] shadow-md hover:shadow-lg transition-all duration-300 h-12 w-38 overflow-hidden"
       >
-        <span className="flex justify-center items-center w-8 h-8 bg-[var(--color-orange)] rounded-full text-[var(--color-white)] text-xl -mt-0.5">→</span>
-        <span className="leading-tight">Contact</span>
+        <div className="flex items-center gap-4 transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
+          <span className="flex justify-center items-center min-w-[32px] h-8 bg-(--color-orange) rounded-full text-white text-lg">
+            <FaArrowRightLong />
+          </span>
+          <span className="whitespace-nowrap">Contact</span>
+        </div>
+
+        <div className="absolute inset-0 flex items-center gap-3 px-4 -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+          <span className="flex justify-center items-center min-w-[32px] h-8 bg-(--color-orange) rounded-full text-white text-lg">
+            <FaArrowRightLong />
+          </span>
+          <span className="whitespace-nowrap">Contact</span>
+        </div>
       </a>
     </div>
   </header>

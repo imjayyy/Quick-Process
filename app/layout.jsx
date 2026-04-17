@@ -1,15 +1,27 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./component/Header";
+import localFont from 'next/font/local';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const pogonia = localFont({
+  src: [
+    {
+      path: '../public/fonts/pogonia/pogonia-medium.ttf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-pogonia',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const harmonie = localFont({
+  src: [
+    {
+      path: '../public/fonts/Harmonie/Harmonie.otf',
+      weight: '400',
+      style: 'normal',
+    }
+  ],
+  variable: '--font-harmonie',
 });
 
 export const metadata = {
@@ -19,11 +31,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/* Body par overflow-x-hidden lagane se pure page ka daen-baen ka scroll band ho jayega */}
-      <body className="min-h-screen flex flex-col bg-[#FFFCF2] overflow-x-hidden">
-        <Header />
-        <main className="flex-grow">
+    <html lang="en" className={`${pogonia.variable} ${harmonie.variable} scroll-smooth`}>
+      <body className="min-h-screen flex flex-col bg-[var(--color-creme)] overflow-x-hidden">
+        <Header  />
+        <main className="flex-grow pt-12">
           {children}
         </main>
       </body>
