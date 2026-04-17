@@ -37,13 +37,13 @@ export default function PortfolioSection() {
             SHOWCASE CAPSULE CONTAINER
             ========================================= */}
         {/* Outer Beige Container with massive rounded corners */}
-        <div className="w-full bg-[#dcd7ce] rounded-[3rem] md:rounded-[12rem] py-10 md:py-20 relative overflow-hidden flex flex-col gap-4 md:gap-6 shadow-sm">
+        <div className="w-full bg-[#dcd7ce] rounded-[3rem] md:rounded-[12rem] py-10 md:py-20 relative overflow-hidden flex flex-col gap-4 md:gap-8 shadow-sm">
 
           {/* ROW 1: Centered Items */}
           <div className="flex justify-center gap-4 md:gap-6 w-full px-4 md:px-16 relative z-10">
             
             {/* Image 1 (Green Design) */}
-            <div className="relative w-[55%] md:w-[48%] h-28 md:h-[180px] lg:h-[220px] rounded-full overflow-hidden shadow-xl group">
+            <div className="relative w-[55%] md:w-[55%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
                 src="https://images.unsplash.com/photo-1628102491629-778571d893a3?q=80&w=1000&auto=format&fit=crop" 
                 alt="Green Packaging Design" 
@@ -53,7 +53,7 @@ export default function PortfolioSection() {
             </div>
 
             {/* Image 2 (Purple Design) */}
-            <div className="relative w-[45%] md:w-[38%] h-28 md:h-[180px] lg:h-[220px] rounded-full overflow-hidden shadow-xl group">
+            <div className="relative w-[45%] md:w-[44%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
                 src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop" 
                 alt="Purple Branding Cards" 
@@ -69,7 +69,7 @@ export default function PortfolioSection() {
           <div className="flex justify-center gap-4 md:gap-6 w-[115%] md:w-[110%] -ml-[7.5%] md:-ml-[5%] relative z-10">
             
             {/* Image 3 (Yellow Design - Cut off on left) */}
-            <div className="relative w-[30%] md:w-[25%] h-28 md:h-[180px] lg:h-[220px] rounded-full overflow-hidden shadow-xl group">
+            <div className="relative w-[30%] md:w-[40%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
                 src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?q=80&w=1000&auto=format&fit=crop" 
                 alt="Yellow Circular Packaging" 
@@ -79,7 +79,7 @@ export default function PortfolioSection() {
             </div>
 
             {/* Image 4 (Black & Orange Box - Center Focus) */}
-            <div className="relative w-[45%] md:w-[42%] h-28 md:h-[180px] lg:h-[220px] rounded-full overflow-hidden shadow-xl group">
+            <div className="relative w-[45%] md:w-[40%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
                 src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" 
                 alt="Catch Community Box" 
@@ -89,7 +89,7 @@ export default function PortfolioSection() {
             </div>
 
             {/* Image 5 (White Bag - Cut off on right) */}
-            <div className="relative w-[25%] md:w-[22%] h-28 md:h-[180px] lg:h-[220px] rounded-full overflow-hidden shadow-xl group">
+            <div className="relative w-[25%] md:w-[20%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
                 src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop" 
                 alt="White Bag Packaging" 
