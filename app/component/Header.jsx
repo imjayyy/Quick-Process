@@ -4,15 +4,19 @@ import React from 'react';
 import { FaArrowRightLong } from "react-icons/fa6";
 const Header = () => (
   <header className="fixed top-0 left-0 w-full z-50">
-    <div className="container flex justify-between items-center w-full mx-auto h-23 px-6 rounded-b-4xl shadow-lg bg-[var(--color-white)]">
+    <div className="relative z-10 max-w-7xl flex justify-between items-center mx-auto h-[92px] px-6 rounded-b-[2rem] shadow-lg bg-white">
       {/* Logo */}
-      <Image
-        src="/logo.png"
-        alt="QuickProcess Logo"
-        width={110}
-        height={40}
-        className="object-contain"
-      />
+<div className="flex items-center shrink-0">
+  <Image
+    src="/logo.svg"
+    alt="QuickProcess Logo"
+    width={110}
+    height={40}
+    style={{ height: '60px', width: 'auto' }} 
+    className="object-contain"
+    priority
+  />
+</div>
       {/* Nav */}
       <nav className="flex gap-20 items-center">
         {['Home', 'About', 'Services', 'Pricing'].map((item) => (
