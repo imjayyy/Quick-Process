@@ -8,6 +8,7 @@ import SeamlessWorkflow from "./component/SeamlessWorkflow";
 import ClientReviews from "./component/ClientReviews";
 import Footer from "./component/Footer";
 import GapWrapper from "./component/GapWrapper";
+import WrapProducts from "./component/WrapProducts";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <FeaturedSection />
       <ExpandingGallery />
       <TestimonialSection />
+      <WrapProducts />
       <SeamlessWorkflow />
       <ClientReviews />
       <GapWrapper />

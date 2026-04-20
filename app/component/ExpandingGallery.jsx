@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const galleryData = [
   {
@@ -47,14 +48,14 @@ export default function ExpandingGallery() {
   const [activeId, setActiveId] = useState(2);
 
   return (
-    <section className="w-full py-20 px-4 md:px-20 bg-[var(--color-white)]">
+    <section className="w-full py-20 px-4 md:px-20 bg-white">
       
       {/* Header Section */}
       <div className="flex flex-col items-center text-center mb-12">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-[var(--color-grey-dark)] tracking-tight mb-4">
+        <h2 className="text-4xl md:text-6xl font-serif font-normal text-[var(--color-text-secondary)] font-harmonie tracking-wider mb-4">
           Elevate Brand Solutions
         </h2>
-        <p className="text-[15px] md:text-[16px] font-medium text-[var(--color-orange)] max-w-2xl leading-relaxed">
+        <p className="text-[15px] md:text-lg font-medium text-[var(--color-primary)] max-w-2xl leading-relaxed font-pogania tracking-tight">
           High-quality printing and packaging solutions designed to <br className="hidden md:block" /> 
           strengthen your brand identity and leave a lasting impression.
         </p>
@@ -117,25 +118,37 @@ export default function ExpandingGallery() {
                   ${isActive ? "opacity-100" : "opacity-0 pointer-events-none"}
                 `}
               >
-                <div className="flex justify-between items-end gap-4">
+                <div className="flex justify-between gap-4">
                   {/* Title & Subtitle */}
                   <div className="flex-1 max-w-[400px]">
-                    <h3 className="text-white text-2xl md:text-3xl font-bold mb-3 leading-tight">
+                    <h3 className="text-white text-2xl md:text-3xl font-light mb-3 leading-tight font-pogania">
                       {item.title}
                     </h3>
-                    <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                    <p className="text-white text-sm md:text-base leading-relaxed font-pogania font-light tracking-wide">
                       {item.subtitle}
                     </p>
                   </div>
 
                   {/* Arrow Button (White Pill with Orange Circle) */}
-                  <div className="hidden sm:flex bg-white rounded-full p-1 items-center justify-center shrink-0 w-[60px] h-[36px]">
-                    <div className="bg-[var(--color-orange)] rounded-full w-7 h-7 flex items-center justify-center ml-auto">
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
-                      </svg>
-                    </div>
-                  </div>
+                <div className="group relative hidden sm:flex items-center justify-center w-16 h-16 cursor-pointer">
+  {/* 1. Dark Capsule Background */}
+  <div className="absolute w-6 h-12 bg-white rounded-full" />
+
+  {/* 2. Orange Circle with Sliding Arrow Logic */}
+  <div className="absolute left-6 z-10 bg-[var(--color-primary)] rounded-full w-8 h-8 flex items-center justify-center shadow-2xl overflow-hidden transition-transform duration-300 group-hover:scale-105">
+    
+    {/* Initial Icon (Sliding Out to Right) */}
+    <FaArrowRightLong 
+      className="absolute w-4 h-4 text-black transition-all duration-500 ease-in-out group-hover:translate-x-12 group-hover:opacity-0" 
+    />
+
+    {/* New Icon (Coming in from Left) */}
+    <FaArrowRightLong 
+      className="absolute w-4 h-4 text-black -translate-x-12 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100" 
+    />
+    
+  </div>
+</div>
                 </div>
               </div>
 

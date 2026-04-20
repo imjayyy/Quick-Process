@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
+  --color-primary: #009BA8;
+  --color-secondary: #3C6A99;
+  --color-container: #EBF7F8;
   --color-white: #FFFFFF;
-  --color-creme: #FFFCF2;
-  --color-grey-light: #CCC5B9;
-  --color-grey-medium: #403D39;
-  --color-grey-dark: #252422;
-  --color-orange: #EB5E28;
+  --color-text-primary: #3C6A99;
+  --color-text-secondary: #242424;
 }
 
 .font-harmonie {
@@ -14,5 +14,5 @@
 }
 
 .font-pogania {
-  font-family: var(--font-pogania);
+  font-family: var(--font-pogonia);
 }

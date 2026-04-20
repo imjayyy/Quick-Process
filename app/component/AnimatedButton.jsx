@@ -7,10 +7,10 @@ export default function AnimatedButton({ text, onClick, className = "" }) {
   {/* Circle and Capsule Container */}
   <div className="relative flex items-center justify-center w-16 h-16">
     {/* Dark Capsule Background - Remains Static */}
-    <div className="absolute w-10 h-16 bg-[var(--color-grey-dark)] rounded-full" />
+    <div className="absolute w-10 h-16 bg-[var(--color-text-secondary)] rounded-full" />
     
     {/* Orange Circle Container with Sliding Arrow */}
-    <div className="absolute z-10 flex items-center justify-center w-12 h-12 ml-6 bg-[var(--color-orange)] rounded-full shadow-lg overflow-hidden">
+    <div className="absolute z-10 flex items-center justify-center w-12 h-12 ml-6 bg-[var(--color-primary)] rounded-full shadow-lg overflow-hidden">
       {/* Initial Arrow (Sliding Right) */}
       <FaArrowRightLong className="absolute w-5 h-5 text-white transition-all duration-500 ease-in-out group-hover:translate-x-12 group-hover:opacity-0" />
       {/* New Arrow (Entering from Left) */}
@@ -21,12 +21,12 @@ export default function AnimatedButton({ text, onClick, className = "" }) {
   {/* Text Container with Sliding Logic */}
   <div className="relative h-8 overflow-hidden flex items-center">
     {/* Initial Text (Sliding Right) */}
-    <span className="text-[var(--color-grey-medium)] text-xl font-semibold tracking-tight transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
-      Learn More
+    <span className="text-[var(--color-text-secondary)] text-xl font-semibold tracking-tight transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
+      {text}
     </span>
     {/* New Text (Entering from Left) */}
-    <span className="absolute text-[var(--color-grey-medium)] text-xl font-semibold tracking-tight -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-      Learn More
+    <span className="absolute text-[var(--color-primary)] text-xl font-semibold tracking-tight -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+      {text}
     </span>
   </div>
 </button>

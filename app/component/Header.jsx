@@ -19,7 +19,7 @@ const Header = () => (
           <a
             key={item}
             href="#"
-            className="text-[17px] font-medium text-(--color-grey-dark) hover:text-(--color-orange) transition-colors duration-200 font-sans"
+            className="text-[17px] font-medium text-(--color-text-secondary) hover:text-(--color-secondary) transition-colors duration-200 font-sans"
           >
             {item}
           </a>
@@ -28,17 +28,17 @@ const Header = () => (
       {/* Contact Button */}
       <a
         href="#"
-        className="group relative flex items-center justify-start bg-[#1e1c1b] text-white px-4 py-2 rounded-full font-semibold text-[17px] shadow-md hover:shadow-lg transition-all duration-300 h-12 w-38 overflow-hidden"
+        className="group relative flex items-center justify-start bg-(--color-secondary) text-white px-2 py-2 rounded-full font-semibold text-[17px] shadow-md hover:shadow-lg transition-all duration-300 h-12 w-38 overflow-hidden"
       >
         <div className="flex items-center gap-4 transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
-          <span className="flex justify-center items-center min-w-[32px] h-8 bg-(--color-orange) rounded-full text-white text-lg">
+          <span className="flex justify-center items-center min-w-[32px] h-8 bg-(--color-primary) rounded-full text-white text-lg">
             <FaArrowRightLong />
           </span>
           <span className="whitespace-nowrap">Contact</span>
         </div>
 
-        <div className="absolute inset-0 flex items-center gap-3 px-4 -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-          <span className="flex justify-center items-center min-w-[32px] h-8 bg-(--color-orange) rounded-full text-white text-lg">
+        <div className="absolute inset-0 flex items-center gap-3 px-2 -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+          <span className="flex justify-center items-center min-w-[32px] h-8 bg-(--color-primary) rounded-full text-white text-lg">
             <FaArrowRightLong />
           </span>
           <span className="whitespace-nowrap">Contact</span>

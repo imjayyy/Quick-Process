@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import AnimatedButton from './AnimatedButton';
 
 export default function PortfolioSection() {
   return (
@@ -18,18 +19,9 @@ export default function PortfolioSection() {
           </p>
 
           {/* Custom Animated Button */}
-          <div className="flex items-center justify-center gap-3 mt-8 cursor-pointer group w-fit mx-auto">
-            <div className="relative w-14 h-10 flex items-center">
-              {/* Dark Back Shape */}
-              <div className="absolute left-0 w-8 h-10 bg-[#2d2d2d] rounded-[20px] transition-transform duration-300 group-hover:-translate-x-1"></div>
-              {/* Orange Front Icon */}
-              <div className="absolute right-0 w-9 h-9 bg-[#e65c3d] rounded-full flex items-center justify-center z-10 transition-transform duration-300 group-hover:translate-x-1 shadow-md">
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 12h14m0 0l-6-6m6 6l-6 6" />
-                </svg>
-              </div>
-            </div>
-            <span className="font-semibold text-sm text-[#1c1c1c] tracking-wide">Explore</span>
+          <div className="w-fit mx-auto">
+
+         <AnimatedButton text="View Portfolio" />
           </div>
         </div>
 
