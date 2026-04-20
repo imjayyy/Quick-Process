@@ -1,4 +1,6 @@
 import Link from "next/link";
+import AnimatedButton from "./AnimatedButton";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const navLinks = ["Home", "About", "Services", "Pricing", "Contact"];
 
@@ -30,36 +32,38 @@ export default function ContactSection() {
             {/* Headline + CTA */}
             <div className=" pt-6 pb-6 flex flex-col gap-5">
               <h2
-                className="text-[var(--color-white)] text-[2.6rem] sm:text-5xl md:text-[3.2rem] leading-[1.1] tracking-tight"
-                style={{
-                  fontFamily: "'Georgia', 'Times New Roman', serif",
-                  fontStyle: "italic",
-                }}
+                className="text-[var(--color-white)] text-[2.6rem] sm:text-5xl md:text-[3.2rem] leading-[1.1] tracking-wide font-harmonie"
+  
               >
                 Let&apos;s Discuss Brands.
               </h2>
-
-              <Link href="#contact" className="flex items-center gap-3 group w-fit">
-                <span className="w-10 h-10 rounded-full bg-[var(--color-orange)] flex items-center justify-center transition-transform duration-300 group-hover:scale-110 shadow-md flex-shrink-0">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="w-4 h-4 text-white"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2.5}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </span>
-                <span className="text-[var(--color-white)] text-sm tracking-widest font-light uppercase">
-                  Contact
-                </span>
-              </Link>
+                <button className="group flex items-center gap-4 bg-transparent cursor-pointer overflow-hidden">
+                  {/* Circle and Capsule Container */}
+                  <div className="relative flex items-center justify-center w-16 h-16">
+                    {/* Dark Capsule Background - Remains Static */}
+                    <div className="absolute w-10 h-16 bg-[var(--color-secondary)] rounded-full" />
+                    
+                    {/* Orange Circle Container with Sliding Arrow */}
+                    <div className="absolute z-10 flex items-center justify-center w-12 h-12 ml-6 bg-[var(--color-primary)] rounded-full shadow-lg overflow-hidden">
+                      {/* Initial Arrow (Sliding Right) */}
+                      <FaArrowRightLong className="absolute w-5 h-5 text-white transition-all duration-500 ease-in-out group-hover:translate-x-12 group-hover:opacity-0" />
+                      {/* New Arrow (Entering from Left) */}
+                      <FaArrowRightLong className="absolute w-5 h-5 text-white -translate-x-12 opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100" />
+                    </div>
+                  </div>
+                
+                  {/* Text Container with Sliding Logic */}
+                  <div className="relative h-8 overflow-hidden flex items-center">
+                    {/* Initial Text (Sliding Right) */}
+                    <span className="text-[var(--color-white)] text-xl font-semibold tracking-tight transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
+                      Contact
+                    </span>
+                    {/* New Text (Entering from Left) */}
+                    <span className="absolute text-[var(--color-primary)] text-xl font-semibold tracking-tight -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
+                      Contact
+                    </span>
+                  </div>
+                </button>
             </div>
           </div>
 
@@ -71,7 +75,7 @@ export default function ContactSection() {
                 <Link
                   key={link}
                   href={`#${link.toLowerCase()}`}
-                  className="text-[var(--color-white)] text-lg font-normal tracking-wide hover:text-white transition-colors duration-200"
+                  className="text-[var(--color-white)] text-lg font-normal tracking-wide hover:text-[var(--color-primary)] font-pogania transition-colors duration-200"
                 >
                   {link}
                 </Link>
@@ -79,17 +83,17 @@ export default function ContactSection() {
             </nav>
 
             {/* Contact info */}
-            <div className="flex flex-col items-start md:items-end gap-0.5">
+            <div className="flex flex-col items-start md:items-end gap-0.5 font-pogania">
               <a
                 href="tel:0390019762"
-                className="text-[var(--color-orange)] text-xl md:text-2xl font-medium tracking-wide hover:opacity-75 transition-opacity"
+                className="text-[var(--color-primary)] text-xl md:text-2xl font-medium tracking-wide hover:opacity-75 transition-opacity"
               >
                 03 9001 9762
               </a>
-              <p className="text-[var(--color-orange)] text-xl md:text-2xl font-medium tracking-wide md:text-right">
+              <p className="text-[var(--color-primary)] text-xl md:text-2xl font-medium tracking-wide md:text-right">
                 PO Box 492,
               </p>
-              <p className="text-[var(--color-orange)] text-xl md:text-2xl font-medium tracking-wide md:text-right">
+              <p className="text-[var(--color-primary)] text-xl md:text-2xl font-medium tracking-wide md:text-right">
                 Hawthorn VIC 3122.
               </p>
             </div>
@@ -98,19 +102,19 @@ export default function ContactSection() {
 
         {/* ── Footer Bar ─────────────────────────────────────────── */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between px-8 md:px-10 py-4 border-t border-white/[0.08] gap-3 sm:gap-0">
-          <p className="text-[var(--color-grey-light)] text-xs font-light tracking-wide">
+          <p className="text-[var(--color-white)] text-xs font-light tracking-wide">
             © 2026 All rights reserved.
           </p>
           <div className="flex items-center gap-7">
             <Link
               href="#privacy"
-              className="text-[var(--color-grey-light)] text-xs font-light tracking-wide hover:text-white transition-colors duration-200"
+              className="text-[var(--color-white)] text-xs font-light tracking-wide hover:text-[var(--color-primary)] transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <Link
               href="#cookies"
-              className="text-[var(--color-grey-light)] text-xs font-light tracking-wide hover:text-white transition-colors duration-200"
+              className="text-[var(--color-white)] text-xs font-light tracking-wide hover:text-[var(--color-primary)] transition-colors duration-200"
             >
               Cookies
             </Link>

@@ -6,38 +6,27 @@ export default function PortfolioSection() {
   return (
     <section className="w-full bg-white py-20 overflow-hidden">
       <div className="w-full mx-auto flex flex-col items-center">
-        
-        {/* =========================================
-            HEADER SECTION
-            ========================================= */}
-        <div className="text-center space-y-5 mb-16 md:mb-20">
-          <h2 className="text-5xl md:text-[64px] font-serif font-medium text-[#1c1c1c] tracking-tight leading-tight">
-            Portfolio, You Must See
-          </h2>
-          <p className="text-[#e65c3d] font-medium text-[15px] md:text-[17px] max-w-xl mx-auto leading-relaxed">
-            Explore our work featuring high-quality prints and packaging designed to elevate brand presence.
-          </p>
-
-          {/* Custom Animated Button */}
-          <div className="w-fit mx-auto">
-
-         <AnimatedButton text="View Portfolio" />
-          </div>
-        </div>
-
-        {/* =========================================
-            SHOWCASE CAPSULE CONTAINER
-            ========================================= */}
-        {/* Outer Beige Container with massive rounded corners */}
-        <div className="w-full bg-[#dcd7ce] rounded-[3rem] md:rounded-[12rem] py-10 md:py-20 relative overflow-hidden flex flex-col gap-4 md:gap-8 shadow-sm">
-
+      
+             <div className="flex flex-col items-center text-center mb-12">
+                <h2 className="text-4xl md:text-6xl font-serif font-normal text-[var(--color-text-secondary)] font-harmonie tracking-wider mb-4">
+                    Portfolio, You Must See
+                </h2>
+                <p className="text-[15px] md:text-lg font-medium text-[var(--color-primary)] max-w-2xl leading-relaxed font-pogania tracking-tight">
+                   Explore our work featuring high-quality prints and packaging <br /> designed to elevate brand presence.
+                </p>
+                <div className='mt-8'>
+                    <AnimatedButton text="Explore" />
+                </div>
+            </div>
+        <div className="w-full bg-[var(--color-container)] rounded-[3rem] md:rounded-[12rem] py-10 md:py-20 relative overflow-hidden flex flex-col gap-4 md:gap-8">
+            {/* Section Header */}
           {/* ROW 1: Centered Items */}
           <div className="flex justify-center gap-4 md:gap-6 w-full px-4 md:px-16 relative z-10">
             
             {/* Image 1 (Green Design) */}
             <div className="relative w-[55%] md:w-[55%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
-                src="https://images.unsplash.com/photo-1628102491629-778571d893a3?q=80&w=1000&auto=format&fit=crop" 
+                src="/portfolio/design1.svg" 
                 alt="Green Packaging Design" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -47,7 +36,7 @@ export default function PortfolioSection() {
             {/* Image 2 (Purple Design) */}
             <div className="relative w-[45%] md:w-[44%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
-                src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=1000&auto=format&fit=crop" 
+                src="/portfolio/design2.svg" 
                 alt="Purple Branding Cards" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -63,7 +52,7 @@ export default function PortfolioSection() {
             {/* Image 3 (Yellow Design - Cut off on left) */}
             <div className="relative w-[30%] md:w-[40%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
-                src="https://images.unsplash.com/photo-1505330622279-bf7d7fc918f4?q=80&w=1000&auto=format&fit=crop" 
+                src="/portfolio/design4.svg" 
                 alt="Yellow Circular Packaging" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -73,7 +62,7 @@ export default function PortfolioSection() {
             {/* Image 4 (Black & Orange Box - Center Focus) */}
             <div className="relative w-[45%] md:w-[40%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
-                src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" 
+                src="/portfolio/design3.svg" 
                 alt="Catch Community Box" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
@@ -83,7 +72,7 @@ export default function PortfolioSection() {
             {/* Image 5 (White Bag - Cut off on right) */}
             <div className="relative w-[25%] md:w-[20%] h-28 md:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
               <Image 
-                src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1000&auto=format&fit=crop" 
+                src="/portfolio/design1.svg" 
                 alt="White Bag Packaging" 
                 fill 
                 className="object-cover transition-transform duration-700 group-hover:scale-105" 
