@@ -5,7 +5,7 @@ import localFont from 'next/font/local';
 const pogonia = localFont({
   src: [
     {
-      path: '../public/fonts/pogonia/pogonia-medium.ttf',
+      path: '../public/fonts/Pogonia/pogonia-medium.otf',
       weight: '400',
       style: 'normal',
     }

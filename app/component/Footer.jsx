@@ -6,7 +6,7 @@ export default function ContactSection() {
   return (
 
     <div className="bg-white">
-      <section className="bg-[var(--color-grey-dark)] relative flex flex-col px-8 md:px-20 pt-10 pb-5 md:pt-16 md:pt-8 gap-10 md:gap-16">
+      <section className="bg-[var(--color-text-secondary)] relative flex flex-col px-8 md:px-20 pt-10 pb-5 md:pt-16 md:pt-8 gap-10 md:gap-16">
 
         {/* ── Main Body ──────────────────────────────────────────── */}
         <div className="flex flex-col md:flex-row justify-between">
