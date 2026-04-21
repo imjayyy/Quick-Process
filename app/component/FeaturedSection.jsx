@@ -1,16 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import FeaturedMobile from "./FeaturedMobile";
 
 export default function FeaturedSection() {
   return (
     <section className="w-full flex justify-center py-16 ">
 
       {/* Main Pill Container */}
-      <div className="relative w-full h-[540px] bg-[var(--color-secondary)] rounded-[260px] overflow-hidden shadow-xl">
+      <div className="hidden lg:flex relative w-full h-[540px] bg-[var(--color-secondary)] rounded-[260px] overflow-hidden shadow-xl">
 
         {/* LEFT: Diagonal Capsules */}
-        <div className="absolute left-25 top-0 w-[50%] h-full pointer-events-none">
-
+        <div className="absolute left-25 top-0 w-[50%] h-full pointer-events-none hidden lg:block">
           {/* Capsule 1 (Top) */}
      <div className="absolute left-[150px] top-[-120px] w-[140px] h-[580px] rotate-[40deg] rounded-[120px] overflow-hidden shadow-2xl z-20">
   
@@ -26,7 +26,6 @@ export default function FeaturedSection() {
 
 </div>
 
-          {/* Capsule 2 (Bottom) */}
          <div className="absolute left-[260px] top-[40px] w-[140px] h-[580px] rotate-[40deg] rounded-[120px] overflow-hidden shadow-2xl z-10">
   
   <div className="relative w-full h-full scale-[1.3] translate-x-6 translate-y-2">
@@ -44,7 +43,7 @@ export default function FeaturedSection() {
         </div>
 
         {/* RIGHT: Content */}
-        <div className="absolute right-0 top-0 w-[50%] h-full flex flex-col justify-center pr-20 pl-10 text-left">
+     <div className="absolute md:right-0 top-0 w-full md:w-[50%] h-full flex flex-col justify-center pr-6 md:pr-20 pl-6 md:pl-10 text-left">
 
           <h2 className="text-4xl leading-[1.2] text-[var(--color-white)] font-harmonie mb-5">
             Excellence In Printing <br />
@@ -85,6 +84,11 @@ export default function FeaturedSection() {
 
         </div>
       </div>
+
+
+      <div className="w-full lg:hidden bg-[var(--color-secondary)] rounded-[40px]">
+    <FeaturedMobile />
+  </div>
     </section>
   );
 }
