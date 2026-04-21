@@ -31,7 +31,7 @@ const workflowSteps = [
 
 export default function SeamlessWorkflow() {
   return (
-    <section className="w-full bg-[var(--color-creme)] py-20 md:py-32">
+    <section className="w-full bg-[var(--color-creme)] py-20 lg:py-32">
       {/* Container: items-start zaroori hai taake sticky effect kaam kare */}
       <div className="max-w-7xl mx-auto px-6 md:px-8 flex flex-col-reverse lg:flex-row items-center relative">
         
@@ -39,12 +39,12 @@ export default function SeamlessWorkflow() {
             LEFT COLUMN: Static Flow (Scrolls normally)
             ========================================= */}
         {/* lg:pt-40 lagaya hai taake cards right text se neechay se start hon */}
-        <div className="w-full lg:w-1/2 flex flex-col gap-20 lg:pt-40 lg:pr-16 relative z-10">
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-20 lg:pt-40 lg:pr-16 relative z-10">
           {workflowSteps.map((step, index) => {
             const isLast = index === workflowSteps.length - 1;
 
             return (
-              <div key={step.id} className={`flex flex-col w-full max-w-md relative ${!isLast ? "mb-40" : ""}`}>
+              <div key={step.id} className={`flex flex-col w-full max-w-md relative ${!isLast ? "lg:mb-40" : ""}`}>
                 
                 {/* Image */}
                 <div className="w-full h-36 md:h-[120px] relative rounded-[20px] overflow-hidden shadow-md group">
@@ -69,31 +69,27 @@ export default function SeamlessWorkflow() {
 
                 {/* Gap Line: Sirf gaps ke darmiyan */}
                 {!isLast && (
-                  <div className="hidden lg:block absolute top-[100%] right-0 w-[1.5px] h-45 bg-gray-300" />
+                  <div className="hidden lg:block absolute top-[100%] right-0 w-[1.5px] h-45 bg-gray-500" />
                 )}
               </div>
             );
           })}
         </div>
 
-        {/* =========================================
-            RIGHT COLUMN: Sticky Header (Stops & stays)
-            ========================================= */}
-        {/* lg:sticky aur lg:top-32 se ye yahan rukk jayega jab aap scroll karenge */}
-     <div className="w-full lg:w-1/2 lg:sticky lg:top-32 lg:self-start flex flex-col mb-12">
-  <h2 className="text-4xl md:text-6xl font-serif font-normal text-[var(--color-text-secondary)] font-harmonie tracking-wider mb-4">
-    Seamless Workflow
-  </h2>
+  <div className="w-full lg:w-1/2 lg:sticky lg:top-32 lg:self-start flex flex-col items-center lg:items-start mb-12">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-normal text-[var(--color-text-secondary)] font-harmonie tracking-wider mb-4">
+          Seamless Workflow
+        </h2>
 
-  <p className="text-[15px] md:text-lg font-medium text-[var(--color-primary)] max-w-2xl leading-relaxed font-pogania tracking-tight">
-    High-quality printing and packaging solutions designed to <br />
+        <p className="text-sm sm:text-base md:text-lg font-medium text-[var(--color-primary)] max-w-xl leading-relaxed font-pogania tracking-tight text-center md:text-left">
+        High-quality printing and packaging solutions designed to
     strengthen your brand identity and leave a lasting impression.
-  </p>
+        </p>
 
-  <div className="mt-8 w-fit">
+         <div className="mt-8 w-fit">
     <AnimatedButton text="Get Started" />
   </div>
-</div>
+      </div>
 
       </div>
     </section>

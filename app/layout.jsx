@@ -25,8 +25,9 @@ const harmonie = localFont({
 });
 
 export const metadata = {
-  title: "Quick Process App",
-  description: "A sleek and modern landing page for QuickProcess, a cutting-edge workflow automation tool designed to streamline your business processes and boost productivity. With a clean and intuitive design, our landing page highlights the key features and benefits of QuickProcess, showcasing how it can revolutionize the way you work. From seamless integrations to powerful automation capabilities, our landing page is the perfect introduction to the future of workflow management.",
+  title: "Quick Process | Printing & Packaging Solutions",
+  description:
+    "Premium printing and packaging services including custom prints, product packaging, brand mockups, logo printing, and creative design solutions. QuickProcess helps businesses build strong brand identity through high-quality packaging and visual branding.",
 };
 
 export default function RootLayout({ children }) {

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
+import { BiSolidQuoteAltLeft } from 'react-icons/bi';
 
 // Testimonial Data Array
 const testimonials = [
@@ -44,31 +45,30 @@ export default function TestimonialSection() {
 
   return (
     // Outer container with white background
-    <section className="w-full bg-white py-24 md:py-32">
+    <section className="w-full bg-white py-10 md:py-32">
       
       {/* Beige Strip */}
       <div className="w-full bg-[var(--color-container)] relative">
         
-        <div className="max-w-7xl mx-auto py-20 md:py-24 flex flex-col md:flex-row items-center justify-between gap-16 md:gap-45">
+        <div className="max-w-7xl mx-auto py-20 px-6 md:py-24 flex flex-col md:flex-row items-center justify-between lg:gap-45">
           
           {/* Left Column: Heading & Intro */}
-          <div className="w-full md:w-5/12 flex flex-col">
-            <h2 className="text-5xl md:text-[72px] font-harmonie font-medium text-[var(--color-grey-dark)] tracking-wide leading-none mb-6">
-              Client Reviews.
-            </h2>
-            <p className="text-[var(--color-text-secondary)] text-lg font-medium font-pogania">
-              Hear from our clients who trust us for precision, quality, and timely delivery in every project.
-            </p>
-          </div>
+          <div className="flex flex-col items-center md:items-start md:mb-14">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-normal text-[var(--color-text-secondary)] font-harmonie tracking-wide mb-4">
+          Client Reviews 
+        </h2>
+
+        <p className="text-sm sm:text-base md:text-lg font-medium text-[var(--color-text-secondary)] max-w-2xl leading-relaxed font-pogania tracking-tight">
+          Hear from our clients who trust us for precision, quality, and timely delivery in every project.
+        </p>
+      </div>
 
           {/* Right Column: Quote & Profiles */}
           <div className="w-full md:w-6/12 relative mt-10 md:mt-0 flex flex-col justify-between">
             
             {/* Giant Overlapping Quote Icon */}
-            <div className="absolute -top-[100px] md:-top-[140px] left-0 md:-left-4 text-[var(--color-secondary)] pointer-events-none">
-              <svg width="120" height="90" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 md:w-32 h-auto">
-                <path d="M38.5 0C28.5 0 20.3 3.5 13.5 10.5C6.7 17.5 3.3 26.3 3.3 37C3.3 44 5.3 50.3 9.3 56C13.3 61.7 18.7 64.5 25.5 64.5C31.5 64.5 36.3 62.5 40 58.5C43.7 54.5 45.5 49.5 45.5 43.5C45.5 37.5 43.7 32.5 40 28.5C36.3 24.5 31.5 22.5 25.5 22.5C24.5 22.5 23.5 22.7 22.5 23C25.2 16.3 30.5 13 38.5 13V0ZM93.5 0C83.5 0 75.3 3.5 68.5 10.5C61.7 17.5 58.3 26.3 58.3 37C58.3 44 60.3 50.3 64.3 56C68.3 61.7 73.7 64.5 80.5 64.5C86.5 64.5 91.3 62.5 95 58.5C98.7 54.5 100.5 49.5 100.5 43.5C100.5 37.5 98.7 32.5 95 28.5C91.3 24.5 86.5 22.5 80.5 22.5C79.5 22.5 78.5 22.7 77.5 23C80.2 16.3 85.5 13 93.5 13V0Z" fill="currentColor"/>
-              </svg>
+            <div className="hidden lg:block absolute -top-[165px] left-0 md:-left-4 text-[var(--color-secondary)] pointer-events-none">
+              <BiSolidQuoteAltLeft className="w-32 h-32 font-pogonia" />
             </div>
 
             {/* Animated Testimonial Text */}
@@ -80,7 +80,7 @@ export default function TestimonialSection() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="text-[19px] md:text-lg text-[var(--color-text-primary)] font-pogania font-normal leading-relaxed max-w-xl"
+                  className="text-base md:text-lg text-[var(--color-text-primary)] font-pogania font-normal leading-relaxed max-w-xl text-center md:text-left"
                 >
                   {activeTestimonial.review}
                 </motion.p>
@@ -88,7 +88,7 @@ export default function TestimonialSection() {
             </div>
 
             {/* User Profiles Selector */}
-            <div className="flex flex-wrap items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 mt-8 md:mt-0">
               {testimonials.map((testimonial) => {
                 const isActive = testimonial.id === activeId;
 

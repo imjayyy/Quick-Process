@@ -77,7 +77,7 @@ return (
             x: spreadX[i], // X-axis spreading
             y: spreadY[i]  // Y-axis spreading
           }} 
-          className={`absolute w-36 h-40 md:w-40 md:h-48 rounded-xl shadow-xl my-8 ${card.style} bg-white transition-shadow hover:shadow-2xl`}
+          className={`hidden lg:flex absolute w-36 h-40 md:w-40 md:h-48 rounded-xl shadow-xl my-8 ${card.style} bg-white transition-shadow hover:shadow-2xl`}
         >
           <div className="relative w-full h-full p-1">
             <Image
@@ -97,8 +97,8 @@ return (
         <div className="text-lg md:text-2xl font-bold text-[var(--color-primary)] mb-4 tracking-wide">
           Welcome to Quick Process
         </div>
-      <h1 className="text-4xl md:text-6xl font-harmonie font-normal tracking-wide text-[var(--color-text-secondary)] text-center leading-tight mb-8 drop-shadow-sm">
-  From Idea to Print —<br />
+      <h1 className="text-4xl md:text-6xl font-harmonie font-normal tracking-wide text-[var(--color-text-secondary)] text-center mb-8 drop-shadow-sm max-w-2xl">
+  From Idea to Print —
   We’ve Got You Covered
 </h1>
       <AnimatedButton text="Learn More" />
