@@ -49,16 +49,16 @@ const Header = () => {
           {/* Contact Button - Hidden on very small screens if needed, or scaled */}
           <a
             href="#contact"
-            className="group relative hidden lg:flex items-center justify-start bg-[#1e1c1b] text-white px-2 py-2 rounded-full font-semibold text-[15px] md:text-[17px] shadow-md transition-all duration-300 h-10 md:h-12 w-32 md:w-40 overflow-hidden"
+            className="group relative hidden lg:flex items-center justify-start bg-[var(--color-secondary)] text-white px-2 py-2 rounded-full font-semibold text-[15px] md:text-[17px] shadow-md transition-all duration-300 h-10 md:h-12 w-32 md:w-40 overflow-hidden"
           >
             <div className="flex items-center gap-3 md:gap-4 transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
-              <span className="flex justify-center items-center min-w-[28px] md:min-w-[32px] h-7 md:h-8 bg-[#e05c30] rounded-full text-white">
+              <span className="flex justify-center items-center min-w-[28px] md:min-w-[32px] h-7 md:h-8 bg-[var(--color-primary)] rounded-full text-white">
                 <FaArrowRightLong className="text-xs md:text-base" />
               </span>
               <span className="whitespace-nowrap">Contact</span>
             </div>
             <div className="absolute inset-0 flex items-center gap-3 px-2 -translate-x-full opacity-0 transition-all duration-500 ease-in-out group-hover:translate-x-0 group-hover:opacity-100">
-              <span className="flex justify-center items-center min-w-[28px] md:min-w-[32px] h-7 md:h-8 bg-[#e05c30] rounded-full text-white">
+              <span className="flex justify-center items-center min-w-[28px] md:min-w-[32px] h-7 md:h-8 bg-[var(--color-primary)] rounded-full text-white">
                 <FaArrowRightLong className="text-xs md:text-base" />
               </span>
               <span className="whitespace-nowrap">Contact</span>
