@@ -18,7 +18,7 @@ const workflowSteps = [
   {
     id: 3,
     title: "3. Precision Printing",
-    desc: "We produce your order using advanced printing technology and strict quality control.",
+    desc: "We produce your order using advanced offset printing technology and strict quality control.",
     image: "/workflow/workflow3.png",
   },
   {
@@ -82,7 +82,7 @@ export default function SeamlessWorkflow() {
         </h2>
 
         <p className="text-sm sm:text-base md:text-lg font-medium text-[var(--color-primary)] max-w-xl leading-relaxed font-pogania tracking-tight text-center md:text-left">
-        High-quality printing and packaging solutions designed to
+        High-quality offset printing and packaging solutions designed to
     strengthen your brand identity and leave a lasting impression.
         </p>
 

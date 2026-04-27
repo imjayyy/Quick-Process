@@ -2,6 +2,7 @@ import Image from "next/image";
 import HeroSection from "./component/HeroSection";
 import StatsSection from "./component/StatsSection";
 import FeaturedSection from "./component/FeaturedSection";
+import ClientsCarousel from "./component/ClientsCarousel";
 import ExpandingGallery from "./component/ExpandingGallery";
 import TestimonialSection from "./component/TestimonialSection";
 import SeamlessWorkflow from "./component/SeamlessWorkflow";
@@ -16,6 +17,7 @@ export default function Home() {
       <HeroSection />
       <StatsSection />
       <FeaturedSection />
+      <ClientsCarousel />
       <ExpandingGallery />
       <TestimonialSection />
       <WrapProducts />

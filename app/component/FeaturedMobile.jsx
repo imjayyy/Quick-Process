@@ -8,11 +8,11 @@ export default function FeaturedMobile() {
 
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
        <Image
-  src="/logo.svg" 
+  src="/Logo_QP.png"
   alt="Background Logo"
-  width={250}
-  height={250}
-  className="object-contain invert brightness-0 invert-[1] opacity-6 transition-opacity duration-300 hover:opacity-100"
+  width={400}
+  height={400}
+  className="object-contain invert brightness-0 invert-[1] opacity-7 transition-opacity duration-300 hover:opacity-100"
 />
       </div>
 
@@ -20,13 +20,13 @@ export default function FeaturedMobile() {
       <div className="relative z-10">
 
         <h2 className="text-3xl leading-[1.2] text-[var(--color-white)] font-harmonie mb-4">
-          Excellence In Printing <br />
+          Excellence In Offset Printing <br />
           And Packaging.
         </h2>
 
-        <p className="font-pogania text-sm leading-relaxed text-[var(--color-primary)] mb-8 tracking-wide [text-shadow:0_1px_3px_rgba(0,0,0,0.45)]">
+        <p className="font-pogania text-sm leading-relaxed text-white mb-8 tracking-wide [text-shadow:0_1px_3px_rgba(0,0,0,0.45)]">
           Precision, quality, and creativity — crafted to elevate your
-          brand presence. Delivering high-end printing and packaging
+          brand presence. Delivering high-end offset printing and packaging
           solutions.
         </p>
 
