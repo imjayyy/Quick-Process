@@ -21,11 +21,11 @@ const Header = () => {
         {/* 1. Logo Section */}
         <div className="flex items-center shrink-0">
           <Image
-            src="/logo.svg"
+            src="/Logo_QP.png"
             alt="QuickProcess Logo"
-            width={110}
-            height={40}
-            style={{ height: 'auto', width: 'clamp(100px, 10vw, 130px)' }} 
+            width={180}
+            height={65}
+            style={{ height: 'auto', width: 'clamp(165px, 14vw, 200px)' }}
             className="object-contain"
             priority
           />
@@ -78,6 +78,14 @@ const Header = () => {
       {/* 4. Mobile Menu Overlay */}
       <div className={`absolute top-[70px] left-0 w-full bg-white shadow-xl transition-all duration-500 lg:hidden overflow-hidden ${isOpen ? 'max-h-[400px] py-8 border-t border-gray-200' : 'max-h-0'}`}>
         <nav className="flex flex-col items-center gap-6">
+          <Image
+            src="/Logo_QP.png"
+            alt="QuickProcess Logo"
+            width={180}
+            height={65}
+            style={{ height: 'auto', width: '160px' }}
+            className="object-contain mb-2"
+          />
           {navLinks.map((link) => (
             <a
               key={link.name}

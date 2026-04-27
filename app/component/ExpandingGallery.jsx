@@ -56,7 +56,7 @@ export default function ExpandingGallery() {
         </h2>
 
         <p className="text-sm sm:text-base md:text-lg font-medium text-[var(--color-primary)] max-w-2xl leading-relaxed font-pogania tracking-tight">
-          High-quality printing and packaging solutions designed to <br className="hidden md:block" />
+          High-quality offset printing and packaging solutions designed to <br className="hidden md:block" />
           strengthen your brand identity and leave a lasting impression.
         </p>
       </div>

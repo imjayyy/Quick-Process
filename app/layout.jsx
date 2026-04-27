@@ -27,7 +27,7 @@ const harmonie = localFont({
 export const metadata = {
   title: "Quick Process | Printing & Packaging Solutions",
   description:
-    "Premium printing and packaging services including custom prints, product packaging, brand mockups, logo printing, and creative design solutions. QuickProcess helps businesses build strong brand identity through high-quality packaging and visual branding.",
+    "Premium offset printing and packaging services including custom prints, product packaging, brand mockups, logo printing, and creative design solutions. Quick Process specialises in offset printing — not gravure — helping businesses build strong brand identity through high-quality packaging and visual branding.",
 };
 
 export default function RootLayout({ children }) {

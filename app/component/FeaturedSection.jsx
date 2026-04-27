@@ -46,13 +46,13 @@ export default function FeaturedSection() {
      <div className="absolute md:right-0 top-0 w-full md:w-[50%] h-full flex flex-col justify-center pr-6 md:pr-20 pl-6 md:pl-10 text-left">
 
           <h2 className="text-4xl leading-[1.2] text-[var(--color-white)] font-harmonie mb-5">
-            Excellence In Printing <br />
+            Excellence In Offset Printing <br />
             And Packaging.
           </h2>
 
-          <p className="font-pogania text-lg leading-relaxed text-[var(--color-primary)] mb-10 font-normal tracking-wide fobt[text-shadow:0_1px_3px_rgba(0,0,0,0.45)]">
+          <p className="font-pogania text-lg leading-relaxed text-white mb-10 font-normal tracking-wide [text-shadow:0_1px_3px_rgba(0,0,0,0.45)]">
             Precision, quality, and creativity — crafted to elevate your<br />
-            brand presence. Delivering high-end printing and <br />
+            brand presence. Delivering high-end offset printing and <br />
             packaging solutions.
           </p>
 
