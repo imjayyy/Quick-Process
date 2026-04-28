@@ -67,8 +67,7 @@ export default function HeroSection() {
   ];
 
 return (
-    <section className="relative flex flex-col items-center justify-center h-screen bg-[var(--color-creme)]">
-      
+<section className="relative flex flex-col items-center justify-center h-auto py-30 lg:h-screen lg:py-0 bg-[var(--color-creme)]">      
       {/* Floating & Spreading Cards */}
       {cards.map((card, i) => (
         <motion.div
