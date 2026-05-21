@@ -51,7 +51,7 @@ export default function ClientsCarousel() {
   return (
     <section className="w-full bg-[var(--color-container)] py-16 md:py-24 px-4">
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-harmonie font-normal text-[var(--color-text-secondary)] tracking-wide mb-3">Our Clients</h2>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-harmonie font-normal text-[var(--color-text-secondary)] tracking-wide mb-3">Clientele</h2>
         <p className="text-sm sm:text-base font-pogania text-[var(--color-primary)] tracking-tight">
           Trusted by businesses that demand the best in offset printing &amp; packaging.
         </p>
