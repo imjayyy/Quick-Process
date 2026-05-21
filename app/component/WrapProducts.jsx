@@ -5,11 +5,11 @@ import AnimatedButton from "./AnimatedButton";
 import Image from "next/image";
 
 const images = [
-    { src: "/products/1.svg", rotate: "-5deg" }, { src: "/products/2.svg", rotate: "3deg" },
-    { src: "/products/3.svg", rotate: "-2deg" }, { src: "/products/4.svg", rotate: "6deg" },
-    { src: "/products/5.svg", rotate: "-4deg" }, { src: "/products/6.svg", rotate: "4deg" },
-    { src: "/products/7.svg", rotate: "-6deg" }, { src: "/products/8.svg", rotate: "2deg" },
-    { src: "/products/9.svg", rotate: "-3deg" }, { src: "/products/10.svg", rotate: "5deg" },
+    { src: "/products/1.webp", rotate: "-5deg" }, { src: "/products/2.webp", rotate: "3deg" },
+    { src: "/products/3.webp", rotate: "-2deg" }, { src: "/products/4.webp", rotate: "6deg" },
+    { src: "/products/5.webp", rotate: "-4deg" }, { src: "/products/6.webp", rotate: "4deg" },
+    { src: "/products/7.webp", rotate: "-6deg" }, { src: "/products/8.webp", rotate: "2deg" },
+    { src: "/products/9.webp", rotate: "-3deg" }, { src: "/products/10.webp", rotate: "5deg" },
 ];
 
 export default function WrapProducts() {
