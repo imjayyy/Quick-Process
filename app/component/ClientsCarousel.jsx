@@ -7,22 +7,29 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 const clients = [
   {
     name: "Client One",
+    logo: "/logos/logo4.jpg",
+    description:
+      "Quick Process transformed our packaging with their top-notch offset printing. The quality and consistency have elevated our brand image significantly.",
+  },
+  {
+    name: "Client Two",
     logo: "/logos/logo1.png",
     description:
       "Quick Process delivered exceptional offset-printed packaging that truly elevated our product line. The print quality and colour accuracy were outstanding.",
   },
   {
-    name: "Client Two",
+    name: "Client Three",
     logo: "/logos/logo2.png",
     description:
       "Outstanding quality and attention to detail. Our offset packaging has never looked better — every batch is consistent and premium.",
   },
   {
-    name: "Client Three",
+    name: "Client Four",
     logo: "/logos/logo3.png",
     description:
       "Reliable, fast, and premium results every time. Quick Process is our go-to offset printing and packaging partner for all our brand needs.",
   },
+
 ];
 const variants = {
   enter: (dir) => ({ x: dir > 0 ? 80 : -80, opacity: 0 }),
