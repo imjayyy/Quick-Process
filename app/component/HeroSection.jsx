@@ -8,37 +8,37 @@ import AnimatedButton from "./AnimatedButton";
 const cards = [
   { 
     // Tech / Laptop (Top Left)
-    src: "/hero-section/card2.png", 
+    src: "/products/9.webp", 
     style: "top-[5%] left-[2%] md:top-[8%] md:left-[8%] rotate-[-15deg]", 
     alt: "Modern laptop on a desk"
   },
   { 
     // Cosmetics / Skincare (Top Right)
-    src: "/hero-section/card3.png", 
+    src: "/products/7.webp", 
     style: "top-[2%] right-[2%] md:top-[5%] md:right-[8%] rotate-[12deg]", 
     alt: "Skincare product bottle"
   },
   { 
     // Gadget / Smartwatch (Mid Left)
-    src: "/hero-section/card4.png", 
+    src: "/products/3.webp", 
     style: "top-[40%] left-[-5%] md:left-[2%] rotate-[-10deg]", 
     alt: "Smartwatch with white background"
   },
   { 
     // Audio / Headphones (Mid Right)
-    src: "/hero-section/card5.png", 
+    src: "/products/6.webp", 
     style: "top-[45%] right-[-5%] md:right-[2%] rotate-[8deg]", 
     alt: "Premium wireless headphones"
   },
   { 
     // Packaging / Coffee Cup (Bottom Left)
-    src: "/hero-section/card6.png", 
+    src: "/products/4.webp", 
     style: "bottom-[5%] left-[5%] md:bottom-[8%] md:left-[12%] rotate-[6deg]", 
     alt: "Artisan coffee cup"
   },
   { 
     // Fashion / Sneaker (Bottom Right)
-    src: "/hero-section/card7.png", 
+    src: "/products/2.webp", 
     style: "bottom-[2%] right-[5%] md:bottom-[5%] md:right-[12%] rotate-[-8deg]", 
     alt: "Red Nike sneaker"
   },
