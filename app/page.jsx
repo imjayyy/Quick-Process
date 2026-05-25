@@ -4,7 +4,7 @@ import StatsSection from "./component/StatsSection";
 import FeaturedSection from "./component/FeaturedSection";
 import ClientsCarousel from "./component/ClientsCarousel";
 import ExpandingGallery from "./component/ExpandingGallery";
-import TestimonialSection from "./component/TestimonialSection";
+// import TestimonialSection from "./component/TestimonialSection";
 import SeamlessWorkflow from "./component/SeamlessWorkflow";
 import ClientReviews from "./component/ClientReviews";
 import Footer from "./component/Footer";
@@ -19,7 +19,7 @@ export default function Home() {
       <FeaturedSection />
       <ClientsCarousel />
       <ExpandingGallery />
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <WrapProducts />
       <SeamlessWorkflow />
       <ClientReviews />
