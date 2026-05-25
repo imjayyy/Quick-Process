@@ -2,6 +2,7 @@ import HeroSection from "./component/HeroSection";
 import StatsSection from "./component/StatsSection";
 import FeaturedSection from "./component/FeaturedSection";
 import ClientsCarousel from "./component/ClientsCarousel";
+import LogoMarquee from "./component/LogoMarquee";
 import ExpandingGallery from "./component/ExpandingGallery";
 // import TestimonialSection from "./component/TestimonialSection";
 import SeamlessWorkflow from "./component/SeamlessWorkflow";
@@ -16,9 +17,8 @@ export default function Home() {
       <div id="hero"><HeroSection /></div>
       <div id="about"><StatsSection /></div>
       <div id="featured"><FeaturedSection /></div>
-      <ClientsCarousel />
+      <LogoMarquee />
       <div id="services"><ExpandingGallery /></div>
-      {/* <TestimonialSection /> */}
       <WrapProducts />
       <div id="workflow"><SeamlessWorkflow /></div>
       <ClientReviews />
