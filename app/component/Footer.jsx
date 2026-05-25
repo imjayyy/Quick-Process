@@ -76,17 +76,22 @@ export default function ContactSection() {
             {/* CONTACT */}
             <div className="flex flex-col items-center md:items-end gap-1 font-pogania">
               <a
-                href="tel:0390019762"
+                href="tel:+92 21 3515 1145 46"
                 className="text-[var(--color-primary)] text-lg sm:text-xl md:text-2xl font-medium"
               >
-                03 9001 9762
+                +92 21 3515 1145 46
               </a>
               <p className="text-[var(--color-primary)] text-lg sm:text-xl md:text-2xl font-medium">
-                PO Box 492,
+                Plot # 20, Sector 25
               </p>
               <p className="text-[var(--color-primary)] text-lg sm:text-xl md:text-2xl font-medium">
-                Hawthorn VIC 3122.
+                Korangi Industrial Area, Karachi, Pakistan
               </p>
+
+                <p className="text-[var(--color-primary)] text-lg sm:text-xl md:text-2xl font-medium">
+                Info@quickprocess.com.pk
+              </p>
+
             </div>
 
           </div>
