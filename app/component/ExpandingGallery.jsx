@@ -71,13 +71,7 @@ export default function ExpandingGallery() {
             <motion.div
               key={item.id}
               onClick={() => setActiveId(item.id)}
-              className={`
-                relative overflow-hidden rounded-[24px] cursor-pointer transition-all duration-500
-                ${isActive 
-                  ? "lg:flex-[4] h-[260px] sm:h-[300px] md:h-[350px] lg:h-[550px]" 
-                  : "lg:flex-[1] h-[80px] sm:h-[100px] md:h-[120px] lg:h-[550px]"
-                }
-              `}
+              className={`relative overflow-hidden rounded-[24px] cursor-pointer transition-all duration-500 ${isActive ? "lg:flex-[4] h-[260px] sm:h-[300px] md:h-[350px] lg:h-[550px]" : "lg:flex-[1] h-[80px] sm:h-[100px] md:h-[120px] lg:h-[550px]"}`}
             >
               {/* Image */}
               <Image
@@ -89,18 +83,15 @@ export default function ExpandingGallery() {
 
               {/* Overlay */}
               <div
-                className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500
-                ${isActive ? "opacity-100" : "opacity-70 hover:opacity-50"}`}
+                className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-70 hover:opacity-50"}`}
               />
 
               {/* Collapsed */}
           <div
-  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300
-  ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"}`}
+  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isActive ? "opacity-0 pointer-events-none" : "opacity-100"}`}
 >
   <span
-    className="text-white text-sm sm:text-base md:text-xl font-medium tracking-wide font-pogania text-center
-    lg:[writing-mode:vertical-rl] lg:rotate-180"
+    className="text-white text-sm sm:text-base md:text-xl font-medium tracking-wide font-pogania text-center lg:[writing-mode:vertical-rl] lg:rotate-180"
   >
     {item.title}
   </span>
@@ -108,8 +99,7 @@ export default function ExpandingGallery() {
 
               {/* Expanded */}
               <div
-                className={`absolute inset-0 p-4 md:p-6 flex flex-col justify-end transition-opacity duration-500
-                ${isActive ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+                className={`absolute inset-0 p-4 md:p-6 flex flex-col justify-end transition-opacity duration-500 ${isActive ? "opacity-100" : "opacity-0 pointer-events-none"}`}
               >
                 <div className="flex justify-between gap-4">
 

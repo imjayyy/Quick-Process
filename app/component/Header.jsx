@@ -2,22 +2,24 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaArrowRightLong, FaBars, FaXmark } from "react-icons/fa6";
+import { useContactModal } from "../context/ContactModalContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { openModal } = useContactModal();
 
   const navLinks = [
-    { name: 'Home', href: '#' },
-    { name: 'About', href: '#' },
-    { name: 'Services', href: '#' },
-    { name: 'Pricing', href: '#' },
+    { name: 'Home', href: '#hero' },
+    { name: 'About', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Pricing', href: '#workflow' },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-0 md:px-4">
       {/* Main Navbar Container */}
       <div className="relative max-w-7xl flex justify-between items-center mx-auto h-[70px] md:h-[92px] px-6 rounded-b-none md:rounded-b-[2.5rem] shadow-lg bg-white transition-all duration-300">
-        
+
         {/* 1. Logo Section */}
         <div className="flex items-center shrink-0">
           <Image
@@ -46,10 +48,10 @@ const Header = () => {
 
         {/* 3. Action Area (Contact Button + Mobile Toggle) */}
         <div className="flex items-center gap-4">
-          {/* Contact Button - Hidden on very small screens if needed, or scaled */}
-          <a
-            href="#contact"
-            className="group relative hidden lg:flex items-center justify-start bg-[var(--color-secondary)] text-white px-2 py-2 rounded-full font-semibold text-[15px] md:text-[17px] shadow-md transition-all duration-300 h-10 md:h-12 w-32 md:w-40 overflow-hidden"
+          {/* Desktop Contact Button */}
+          <button
+            onClick={openModal}
+            className="group relative hidden lg:flex items-center justify-start bg-[var(--color-secondary)] text-white px-2 py-2 rounded-full font-semibold text-[15px] md:text-[17px] shadow-md transition-all duration-300 h-10 md:h-12 w-32 md:w-40 overflow-hidden cursor-pointer"
           >
             <div className="flex items-center gap-3 md:gap-4 transition-all duration-500 ease-in-out group-hover:translate-x-full group-hover:opacity-0">
               <span className="flex justify-center items-center min-w-[28px] md:min-w-[32px] h-7 md:h-8 bg-[var(--color-primary)] rounded-full text-white">
@@ -63,10 +65,10 @@ const Header = () => {
               </span>
               <span className="whitespace-nowrap">Contact</span>
             </div>
-          </a>
+          </button>
 
           {/* Mobile Menu Toggle */}
-          <button 
+          <button
             className="lg:hidden text-2xl text-[#1e1c1b] p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
@@ -96,13 +98,12 @@ const Header = () => {
               {link.name}
             </a>
           ))}
-          <a 
-            href="#contact" 
-            className="mt-4 bg-[var(--color-primary)] text-white px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300"
-            onClick={() => setIsOpen(false)}
+          <button
+            onClick={() => { openModal(); setIsOpen(false); }}
+            className="mt-4 bg-[var(--color-primary)] text-white px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 cursor-pointer"
           >
             Get In Touch
-          </a>
+          </button>
         </nav>
       </div>
     </header>

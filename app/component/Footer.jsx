@@ -1,9 +1,19 @@
+"use client";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { useContactModal } from "../context/ContactModalContext";
 
-const navLinks = ["Home", "About", "Services", "Pricing", "Contact"];
+const navLinks = [
+  { name: "Home", href: "#hero" },
+  { name: "About", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Pricing", href: "#workflow" },
+  { name: "Contact", href: null },
+];
 
 export default function ContactSection() {
+  const { openModal } = useContactModal();
+
   return (
     <div className="bg-white">
       <section className="bg-[var(--color-text-secondary)] relative flex flex-col px-5 sm:px-8 md:px-20 pt-10 md:pt-16 pb-8 gap-12 md:gap-16">
@@ -32,7 +42,7 @@ export default function ContactSection() {
               </h2>
 
               {/* BUTTON */}
-              <button className="group flex items-center gap-4 cursor-pointer">
+              <button onClick={openModal} className="group flex items-center gap-4 cursor-pointer">
 
                 <div className="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16">
                   <div className="absolute w-8 sm:w-10 h-14 sm:h-16 bg-[var(--color-secondary)] rounded-full" />
@@ -62,15 +72,25 @@ export default function ContactSection() {
 
             {/* NAV */}
             <nav className="flex flex-col items-center md:items-end gap-2">
-              {navLinks.map((link) => (
-                <Link
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="text-[var(--color-white)] text-base sm:text-lg hover:text-[var(--color-primary)] transition-colors"
-                >
-                  {link}
-                </Link>
-              ))}
+              {navLinks.map((link) =>
+                link.href ? (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className="text-[var(--color-white)] text-base sm:text-lg hover:text-[var(--color-primary)] transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                ) : (
+                  <button
+                    key={link.name}
+                    onClick={openModal}
+                    className="text-[var(--color-white)] text-base sm:text-lg hover:text-[var(--color-primary)] transition-colors cursor-pointer bg-transparent border-none"
+                  >
+                    {link.name}
+                  </button>
+                )
+              )}
             </nav>
 
             {/* CONTACT */}

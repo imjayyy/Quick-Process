@@ -29,6 +29,24 @@ const clients = [
     description:
       "Reliable, fast, and premium results every time. Quick Process is our go-to offset printing and packaging partner for all our brand needs.",
   },
+  {
+    name: "Client Five",
+    logo: "/logos/logo5.png",
+    description:
+      "Quick Process's offset printing services have been a game-changer for our packaging. The quality is consistently excellent, and their team is fantastic to work with.",
+  },
+  {
+    name: "Client Six",
+    logo: "/logos/logo6.png",
+    description:
+      "The quality of Quick Process's offset printing is unmatched. Our packaging looks incredible, and we've received countless compliments from customers.",
+  },
+  {
+    name: "Client Seven",
+    logo: "/logos/logo7.png",
+    description:
+      "Quick Process has consistently delivered high-quality offset printing for our packaging needs. Their attention to detail and customer service are top-notch.", 
+  },
 
 ];
 const variants = {

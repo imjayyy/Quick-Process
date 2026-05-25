@@ -100,7 +100,10 @@ return (
   From Idea to Print —
   We’ve Got You Covered
 </h1>
-      <AnimatedButton text="Learn More" />
+      <AnimatedButton
+        text="Learn More"
+        onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+      />
       </div>
     </section>
   );
