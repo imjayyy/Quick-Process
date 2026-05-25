@@ -1,6 +1,6 @@
 import "./globals.css";
-import Header from "./component/Header";
 import localFont from 'next/font/local';
+import Providers from "./providers";
 
 const pogonia = localFont({
   src: [
@@ -34,10 +34,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${pogonia.variable} ${harmonie.variable} scroll-smooth`}>
       <body className="min-h-screen flex flex-col bg-[var(--color-creme)] overflow-x-hidden">
-        <Header  />
-        <main className="flex-grow pt-12">
+        <Providers>
           {children}
-        </main>
+        </Providers>
       </body>
     </html>
   );

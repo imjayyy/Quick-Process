@@ -1,4 +1,3 @@
-import Image from "next/image";
 import HeroSection from "./component/HeroSection";
 import StatsSection from "./component/StatsSection";
 import FeaturedSection from "./component/FeaturedSection";
@@ -14,14 +13,14 @@ import WrapProducts from "./component/WrapProducts";
 export default function Home() {
   return (
     <div>
-      <HeroSection />
-      <StatsSection />
-      <FeaturedSection />
+      <div id="hero"><HeroSection /></div>
+      <div id="about"><StatsSection /></div>
+      <div id="featured"><FeaturedSection /></div>
       <ClientsCarousel />
-      <ExpandingGallery />
+      <div id="services"><ExpandingGallery /></div>
       {/* <TestimonialSection /> */}
       <WrapProducts />
-      <SeamlessWorkflow />
+      <div id="workflow"><SeamlessWorkflow /></div>
       <ClientReviews />
       <GapWrapper />
       <Footer />

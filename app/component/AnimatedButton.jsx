@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function AnimatedButton({ text, onClick, className = "" }) {
   return (
-   <button className="group flex items-center gap-4 bg-transparent cursor-pointer overflow-hidden">
+   <button onClick={onClick} className="group flex items-center gap-4 bg-transparent cursor-pointer overflow-hidden">
   {/* Circle and Capsule Container */}
   <div className="relative flex items-center justify-center w-16 h-16">
     {/* Dark Capsule Background - Remains Static */}
