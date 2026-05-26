@@ -37,16 +37,16 @@ export default function FeaturedMobile() {
           </h3>
 
           <div className="flex flex-wrap justify-center gap-6">
-            {[1, 2, 3].map((num) => (
+            {[{ n: 39, ext: "png" }, { n: 29, ext: "png" }, { n: 9, ext: "png" }].map(({ n, ext }) => (
               <div
-                key={num}
+                key={n}
                 className="relative w-24 h-10 flex items-center justify-center"
               >
                 <Image
-                  src={`/logos/logo${num}.png`}
-                  alt={`Partner Logo ${num}`}
+                  src={`/logos/logo${n}.${ext}`}
+                  alt={`Partner Logo ${n}`}
                   fill
-                  className="object-contain grayscale"
+                  className="object-contain "
                 />
               </div>
             ))}

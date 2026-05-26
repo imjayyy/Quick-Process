@@ -63,18 +63,16 @@ export default function FeaturedSection() {
             </h3>
 
             <div className="flex flex-wrap gap-8">
-              {[1, 2, 3].map((num) => (
+              {[{ n: 39, ext: "png" }, { n: 29, ext: "png" }, { n: 9, ext: "png" }].map(({ n, ext }) => (
                 <div
-                  key={num}
-                  // Sabke liye ek hi size ka container
+                  key={n}
                   className="relative w-28 h-12 md:w-36 md:h-20 flex items-center justify-center"
                 >
                   <Image
-                    src={`/logos/logo${num}.png`}
-                    alt={`Partner Logo ${num}`}
+                    src={`/logos/logo${n}.${ext}`}
+                    alt={`Partner Logo ${n}`}
                     fill
-                    // p-2 ya p-4 add karne se bade logos ko thori saans milegi aur wo chote logos ke barabar lagenge
-                    className="object-contain grayscale hover:grayscale-0 transition-all duration-300 py-2 md:py-3"
+                    className="object-contain  hover:grayscale-0 transition-all duration-300 py-2 md:py-3"
                     sizes="(max-width: 768px) 112px, 144px"
                   />
                 </div>
