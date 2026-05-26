@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { BiSolidQuoteAltLeft } from "react-icons/bi";
+import { useContactModal } from "../context/ContactModalContext";
 const galleryData = [
   {
     id: 1,
@@ -45,6 +46,7 @@ const galleryData = [
 
 export default function ExpandingGallery() {
   const [activeId, setActiveId] = useState(2);
+  const { openModal } = useContactModal();
 
   return (
     <section className="w-full py-16 md:py-20 px-4 md:px-12 lg:px-20 bg-white">
@@ -115,7 +117,7 @@ export default function ExpandingGallery() {
                   </div>
 
                   {/* Arrow (hidden on small) */}
-                  <button className="group relative hidden md:flex items-center justify-center w-14 h-14 cursor-pointer">
+                  <button onClick={openModal} className="group relative hidden md:flex items-center justify-center w-14 h-14 cursor-pointer">
                     <div className="absolute w-6 h-12 bg-white rounded-full" />
 
                     <div className="absolute left-6 z-10 bg-[var(--color-primary)] rounded-full w-8 h-8 flex items-center justify-center shadow-2xl overflow-hidden">

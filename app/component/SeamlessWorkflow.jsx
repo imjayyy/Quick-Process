@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import AnimatedButton from "./AnimatedButton";
+import { useContactModal } from "../context/ContactModalContext";
 
 const workflowSteps = [
   {
@@ -30,6 +32,7 @@ const workflowSteps = [
 ];
 
 export default function SeamlessWorkflow() {
+  const { openModal } = useContactModal();
   return (
     <section className="w-full bg-[var(--color-creme)] py-20 lg:py-32">
       {/* Container: items-start zaroori hai taake sticky effect kaam kare */}
@@ -87,7 +90,7 @@ export default function SeamlessWorkflow() {
         </p>
 
          <div className="mt-8 w-fit">
-    <AnimatedButton text="Get Started" />
+    <AnimatedButton text="Get Started" onClick={openModal} />
   </div>
       </div>
 
