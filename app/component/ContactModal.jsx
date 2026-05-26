@@ -1,8 +1,9 @@
 "use client";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaXmark, FaArrowRightLong, FaCircleCheck } from "react-icons/fa6";
+import { FaXmark, FaCircleCheck } from "react-icons/fa6";
 import { useContactModal } from "../context/ContactModalContext";
+import AnimatedButton from "./AnimatedButton";
 
 const inputClass =
   "w-full px-4 py-3 rounded-xl border border-gray-200 bg-gray-50 text-[#1e1c1b] text-sm placeholder-gray-400 focus:outline-none focus:border-[var(--color-primary)] focus:bg-white transition-all duration-200";
@@ -62,7 +63,7 @@ export default function ContactModal() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={handleClose}
-            className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm"/>
+            className="fixed inset-0 z-100 bg-black/60 backdrop-blur-sm"/>
 
           <motion.div
             key="modal"
@@ -70,18 +71,18 @@ export default function ContactModal() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 40, scale: 0.97 }}
             transition={{ type: "spring", stiffness: 280, damping: 28 }}
-            className="fixed inset-0 z-[101] flex items-center justify-center px-4"
+            className="fixed inset-0 z-101 flex items-center justify-center px-4"
             aria-modal="true"
             role="dialog">
             <div className="relative w-full max-w-lg bg-white rounded-3xl shadow-2xl overflow-hidden">
-              <div className="bg-[var(--color-text-secondary)] px-8 py-6 flex items-center justify-between">
+              <div className="bg-(--color-text-secondary) px-8 py-6 flex items-center justify-between">
                 <div>
                   <h2 className="text-white text-2xl font-harmonie tracking-wide">Get In Touch</h2>
-                  <p className="text-[var(--color-primary)] text-sm mt-0.5">We&apos;ll get back to you shortly.</p>
+                  <p className="text-(--color-primary) text-sm mt-0.5">We&apos;ll get back to you shortly.</p>
                 </div>
                 <button
                   onClick={handleClose}
-                  className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
+                  className="cursor-pointer flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors duration-200"
                   aria-label="Close modal">
                   <FaXmark className="text-base" />
                 </button>
@@ -92,14 +93,14 @@ export default function ContactModal() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     className="flex flex-col items-center justify-center py-10 gap-4 text-center">
-                    <FaCircleCheck className="text-[var(--color-primary)] text-5xl" />
+                    <FaCircleCheck className="text-(--color-primary) text-5xl" />
                     <h3 className="text-[#1e1c1b] text-xl font-semibold">Message Sent!</h3>
                     <p className="text-gray-500 text-sm max-w-xs">
                       Thanks for reaching out. Our team will contact you within 24 hours.
                     </p>
                     <button
                       onClick={handleClose}
-                      className="mt-3 bg-[var(--color-primary)] text-white px-7 py-2.5 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity">
+                      className="mt-3 bg-(--color-primary) text-white px-7 py-2.5 rounded-full font-semibold text-sm hover:opacity-90 transition-opacity">
                       Close
                     </button>
                   </motion.div>
@@ -156,28 +157,14 @@ export default function ContactModal() {
                     {status === "error" && (
                       <p className="text-red-500 text-sm">{errorMsg}</p>
                     )}
-                    <button
-                      type="submit"
+                    
+                    <AnimatedButton
+                      text={status === "loading" ? "Sending..." : "Send Message"}
+                      onClick={handleSubmit}
+                      className="mt-1"
                       disabled={status === "loading"}
-                      className="group relative flex items-center justify-center gap-3 bg-[var(--color-secondary)] text-white px-6 py-3.5 rounded-full font-semibold text-[15px] shadow-md transition-all duration-300 overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed mt-1">
-                      {status === "loading" ? (
-                        <span className="flex items-center gap-2">
-                          <svg className="animate-spin h-4 w-4 text-white" viewBox="0 0 24 24" fill="none">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                          </svg>
-                          Sending...
-                        </span>
-                      ) : (
-                        <>
-                          <span className="flex items-center justify-center w-7 h-7 bg-[var(--color-primary)] rounded-full">
-                            <FaArrowRightLong className="text-xs" />
-                          </span>
-                          Send Message
-                        </>
-                      )}
+                    />
 
-                    </button>
                   </form>
                 )}
               </div>

@@ -71,7 +71,7 @@ const Header = () => {
           <button
             className="lg:hidden text-2xl text-[#1e1c1b] p-2"
             onClick={() => setIsOpen(!isOpen)}
-          >
+          > 
             {isOpen ? <FaXmark /> : <FaBars />}
           </button>
         </div>
@@ -100,7 +100,7 @@ const Header = () => {
           ))}
           <button
             onClick={() => { openModal(); setIsOpen(false); }}
-            className="mt-4 bg-[var(--color-primary)] text-white px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 cursor-pointer"
+            className="mt-4 bg-(--color-primary) text-white px-8 py-3 rounded-full font-semibold shadow-md transition-all duration-300 cursor-pointer"
           >
             Get In Touch
           </button>

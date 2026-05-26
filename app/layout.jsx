@@ -1,6 +1,6 @@
 import "./globals.css";
 import localFont from 'next/font/local';
-import Providers from "./providers";
+import Providers from "./providers/providers";
 
 const pogonia = localFont({
   src: [
