@@ -78,6 +78,7 @@ export default function ExpandingGallery() {
                 src={item.image}
                 alt={item.title}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
 
