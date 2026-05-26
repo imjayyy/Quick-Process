@@ -19,8 +19,6 @@ export default function StatsSection() {
               {stat.value}
             </span>
           </div>
-
-          {/* Label */}
           <span className="text-sm sm:text-base md:text-lg font-semibold text-(--color-primary) text-center sm:text-left">
             {stat.label}
           </span>
