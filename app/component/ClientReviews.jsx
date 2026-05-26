@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Image from 'next/image';
 import AnimatedButton from './AnimatedButton';
@@ -16,7 +17,10 @@ export default function PortfolioSection() {
         Explore our work featuring high-quality prints and packaging designed to elevate brand presence.
         </p>
         <div className="mt-8">
-          <AnimatedButton text="View Portfolio" />
+          <AnimatedButton
+            text="View Portfolio"
+            onClick={() => document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })}
+          />
         </div>
       </div>
 
