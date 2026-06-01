@@ -1,17 +1,21 @@
 "use client";
 import Image from "next/image";
 
-const svgLogos = new Set([3, 41]);
+const svgLogos = new Set([3]);
 const jpgLogos = new Set([4]);
 
-const allLogos = Array.from({ length: 41 }, (_, i) => {
-  const n = i + 1;
-  const ext = svgLogos.has(n) ? "svg" : jpgLogos.has(n) ? "jpg" : "png";
-  return { src: `/logos/logo${n}.${ext}`, alt: `Client logo ${n}` };
-});
+const allLogos = [
+  { src: "/logos/logo00.jpg", alt: "Client logo" },
+  { src: "/logos/logo01.png", alt: "Client logo" },
+  ...Array.from({ length: 39 }, (_, i) => {
+    const n = i + 2; 
+    const ext = svgLogos.has(n) ? "svg" : jpgLogos.has(n) ? "jpg" : "png";
+    return { src: `/logos/logo${n}.${ext}`, alt: `Client logo ${n}` };
+  }),
+];
 
-const row1 = allLogos.slice(2, 21); 
-const row2 = allLogos.slice(21, 40); 
+const row1 = allLogos.slice(0, 21); 
+const row2 = allLogos.slice(21, 41); 
 
 function MarqueeRow({ logos, direction }) {
   const doubled = [...logos, ...logos];
