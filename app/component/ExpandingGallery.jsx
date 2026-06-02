@@ -10,7 +10,7 @@ const galleryData = [
     id: 1,
     title: "Custom Print Solutions",
     subtitle: "High-quality printing tailored to your specific brand needs.",
-    image: "/brand-solutions/1.png",
+    image: "/brand-solutions/1.jpg",
   },
   {
     id: 2,
@@ -22,25 +22,25 @@ const galleryData = [
     id: 3,
     title: "Packaging & Label Solutions",
     subtitle: "Creative labels and packaging to make your products stand out.",
-    image: "/brand-solutions/3.png",
+    image: "/brand-solutions/3.jpg",
   },
   {
     id: 4,
     title: "Large Format Displays",
     subtitle: "Eye-catching banners and displays for events and storefronts.",
-    image: "/brand-solutions/4.png",
+    image: "/brand-solutions/4.jpg",
   },
   {
     id: 5,
     title: "Premium Print Finishing",
     subtitle: "Foil stamping, embossing, and premium textures for print.",
-    image: "/brand-solutions/5.png",
+    image: "/brand-solutions/5.jpg",
   },
   {
     id: 6,
     title: "Marketing Print Collateral",
     subtitle: "Brochures, flyers, and business cards crafted to perfection.",
-    image: "/brand-solutions/6.png",
+    image: "/brand-solutions/6.jpg",
   },
 ];
 

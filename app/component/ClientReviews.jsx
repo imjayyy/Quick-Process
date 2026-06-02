@@ -54,7 +54,7 @@ export default function PortfolioSection() {
 
     <div className="relative w-full md:w-[40%] h-24 lg:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
       <Image
-        src="/portfolio/design4.svg"
+        src="/portfolio/design4.png"
         alt="Yellow Circular Packaging"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"

@@ -14,7 +14,7 @@ export default function StatsSection() {
         <div key={stat.label} className="flex items-center justify-center sm:justify-start gap-4 sm:gap-6">
           
           {/* Circle */}
-          <div className="w-42 h-42 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-(--color-container) flex items-center justify-end shrink-0 overflow-hidden">
+          <div className="w-42 h-42 md:w-48 md:h-48 lg:w-64 lg:h-64 rounded-full bg-(--color-container) flex items-center justify-center shrink-0 overflow-hidden">
             <span className="text-[4rem] md:text-[5rem] lg:text-[7rem] font-normal text-(--color-text-primary) font-harmonie">
               {stat.value}
             </span>
