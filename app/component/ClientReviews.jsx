@@ -31,7 +31,7 @@ export default function PortfolioSection() {
 
     <div className="relative w-full md:w-[55%] h-24 lg:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
       <Image
-        src="/portfolio/design1.svg"
+        src="/portfolio/design1.png"
         alt="Green Packaging Design"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -40,7 +40,7 @@ export default function PortfolioSection() {
 
     <div className="relative w-full md:w-[44%] h-24 lg:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
       <Image
-        src="/portfolio/design2.svg"
+        src="/portfolio/design2.png"
         alt="Purple Branding Cards"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -63,7 +63,7 @@ export default function PortfolioSection() {
 
     <div className="relative w-full md:w-[40%] h-24 lg:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
       <Image
-        src="/portfolio/design3.svg"
+        src="/portfolio/design3.png"
         alt="Catch Community Box"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -72,7 +72,7 @@ export default function PortfolioSection() {
 
     <div className="relative w-full md:w-[20%] h-24 lg:h-[180px] lg:h-[150px] rounded-full overflow-hidden shadow-xl group">
       <Image
-        src="/portfolio/design1.svg"
+        src="/portfolio/design1.png"
         alt="White Bag Packaging"
         fill
         className="object-cover transition-transform duration-700 group-hover:scale-105"
