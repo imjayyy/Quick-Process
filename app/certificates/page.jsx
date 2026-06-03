@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function CertificatesPage() {
   return (
-    <main className="relative min-h-screen py-20 md:py-28 overflow-hidden bg-[#f0f2fa]">
+    <main className="relative min-h-screen -mt-12 pt-28 pb-20 md:pt-32 md:pb-28 overflow-hidden bg-[#f0f2fa]">
 
       {/* Blur circles */}
       <div className="pointer-events-none absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-[#5B6FE8] opacity-40 blur-[130px]" />
@@ -35,10 +35,10 @@ export default function CertificatesPage() {
 
           {/* Heading */}
           <div className="text-center mb-10 md:mb-14">
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-harmonie font-bold tracking-[0.15em] md:tracking-[0.2em] text-[#1a1a2e]">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-serif font-normal text-[var(--color-text-secondary)] font-harmonie tracking-wider mb-4">
               CERTIFICATE
-            </h1>
-            <p className="mt-2 md:mt-3 text-xs sm:text-sm md:text-base font-pogania text-[#5B6FE8] tracking-widest uppercase">
+            </h2>
+        <p className="text-sm sm:text-base md:text-lg font-medium text-[var(--color-primary)] leading-relaxed font-pogania tracking-tight">
               Trusted &amp; Verified
             </p>
           </div>
