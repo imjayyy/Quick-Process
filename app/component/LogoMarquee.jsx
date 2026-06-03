@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 
 const allLogos = [
   "/logos/Logo01.png",
@@ -97,17 +96,9 @@ export default function LogoMarquee() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-harmonie font-normal text-[var(--color-text-secondary)] tracking-wide mb-3">
           Our Clients
         </h2>
-        <p className="text-sm sm:text-base font-pogania text-[var(--color-primary)] tracking-tight mb-6">
+        <p className="text-sm sm:text-base font-pogania text-[var(--color-primary)] tracking-tight">
           Trusted by 40+ businesses across Pakistan and beyond.
         </p>
-        <Link
-          href="/certificates"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-6 py-2.5 bg-[var(--color-text-secondary)] text-white text-sm font-pogania rounded-full hover:bg-[var(--color-primary)] transition-colors duration-300"
-        >
-          View Certificates
-        </Link>
       </div>
 
       <div
