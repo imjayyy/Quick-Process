@@ -69,7 +69,7 @@ function MarqueeRow({ logos, direction }) {
         ))}
       </div>
     </div>
-  );
+  ); 
 }
 
 export default function LogoMarquee() {
