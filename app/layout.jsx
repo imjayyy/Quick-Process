@@ -25,7 +25,7 @@ const harmonie = localFont({
 });
 
 export const metadata = {
-  title: "Quick Process | Printing & Packaging Solutions",
+  title: "Quick Process | Printing & Packaging Pvt (Ltd.)",
   description:
     "Premium offset printing and packaging services including custom prints, product packaging, brand mockups, logo printing, and creative design solutions. Quick Process specialises in offset printing — not gravure — helping businesses build strong brand identity through high-quality packaging and visual branding.",
 };
