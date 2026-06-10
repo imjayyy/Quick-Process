@@ -63,13 +63,13 @@ export default function FeaturedSection() {
             </h3>
 
             <div className="flex flex-wrap gap-8">
-              {[{ n: 25, ext: "png" }, { n: 24, ext: "png" }, { n: 5, ext: "png" }].map(({ n, ext }) => (
+              {[{ n: 4, ext: "png" }, { n: 3, ext: "png" }, { n: 2, ext: "png" }].map(({ n, ext }) => (
                 <div
                   key={n}
                   className="relative w-28 h-12 md:w-36 md:h-20 flex items-center justify-center"
                 >
                   <Image
-                    src={`/logos/Logo${n}.${ext}`}
+                    src={`/trusted-by/comp${n}.${ext}`}
                     alt={`Partner Logo ${n}`}
                     fill
                     className="object-contain  hover:grayscale-0 transition-all duration-300 py-2 md:py-3"

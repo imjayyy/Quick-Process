@@ -37,13 +37,13 @@ export default function FeaturedMobile() {
           </h3>
 
           <div className="flex flex-wrap justify-center gap-6">
-            {[{ n: 25, ext: "png" }, { n: 24, ext: "png" }, { n: 5, ext: "png" }].map(({ n, ext }) => (
+            {[{ n: 4, ext: "png" }, { n: 3, ext: "png" }, { n: 2, ext: "png" }].map(({ n, ext }) => (
               <div
                 key={n}
                 className="relative w-24 h-10 flex items-center justify-center"
               >
                 <Image
-                  src={`/logos/Logo${n}.${ext}`}
+                  src={`/trusted-by/comp${n}.${ext}`}
                   alt={`Partner Logo ${n}`}
                   fill
                   className="object-contain "

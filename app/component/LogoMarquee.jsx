@@ -97,8 +97,7 @@ export default function LogoMarquee() {
           Our Clients
         </h2>
         <p className="text-sm sm:text-base font-pogania text-[var(--color-primary)] tracking-tight">
-          Trusted by 40+ businesses across Pakistan and beyond.
-        </p>
+Trusted by 40+ business across Pakistan , UK and beyond        </p>
       </div>
 
       <div
