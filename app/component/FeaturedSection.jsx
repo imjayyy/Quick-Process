@@ -63,7 +63,7 @@ export default function FeaturedSection() {
             </h3>
 
             <div className="flex flex-wrap gap-8">
-              {[{ n: 4, ext: "png" }, { n: 3, ext: "png" }, { n: 2, ext: "png" }].map(({ n, ext }) => (
+              {[{ n: 1, ext: "png" },{ n: 2, ext: "png" },{ n: 3, ext: "png" }, { n: 4, ext: "png" }, { n: 5, ext: "png" }].map(({ n, ext }) => (
                 <div
                   key={n}
                   className="relative w-28 h-12 md:w-36 md:h-20 flex items-center justify-center"
